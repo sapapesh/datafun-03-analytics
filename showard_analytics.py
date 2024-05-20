@@ -246,10 +246,10 @@ def main():
     json_folder_name = 'data-json' 
 
     #File names
-    txt_filename = 'data.txt'
-    csv_filename = 'data.csv'
-    excel_filename = 'data.xls' 
-    json_filename = 'data.json' 
+    txt_filename = 'romeoJuliet.txt'
+    csv_filename = 'countryscore.csv'
+    excel_filename = 'cattle.xls' 
+    json_filename = 'astronauts.json' 
 
     #Function to fetch data from sources and convert to files
     fetch_and_write_txt_data(txt_folder_name, txt_filename, txt_url)
@@ -258,52 +258,12 @@ def main():
     fetch_and_write_json_data(json_folder_name, json_filename,json_url)
 
     #Function to process data in file formats
-    process_txt_file(txt_folder_name,'data.txt', 'results_txt.txt')
-    process_csv_file(csv_folder_name,'data.csv', 'results_csv.txt')
-    process_excel_file(excel_folder_name,'data.xls', 'results_xls.txt')
-    process_json_file(json_folder_name,'data.json', 'results_json.txt')
+    process_txt_file(txt_folder_name,'romeoJuliet.txt', 'results_txt.txt')
+    process_csv_file(csv_folder_name,'countryLadderScore.csv', 'results_csv.txt')
+    process_excel_file(excel_folder_name,'cattle.xls', 'results_xls.txt')
+    process_json_file(json_folder_name,'astronauts.json', 'results_json.txt')
 
 
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def write_txt_file(folder_name, filename, data):
-    file_path = pathlib.Path(folder_name).join_path(filename) # use pathlib to join paths
-    with file_path.open('w') as file:
-        file.write(data)
-        print(f"Text data saved to {file_path}")
-
-
-def write_excel_file(folder_name, filename, data):
-    file_path = pathlib.Path(folder_name).join_path(filename) # use pathlib to join paths
-    with open(file_path, 'wb') as file:
-        file.write(response.content)
-        print(f"Excel data saved to {file_path}")
