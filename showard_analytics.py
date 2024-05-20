@@ -14,6 +14,7 @@ import xlrd
 #Function to fetch data to a new text file from a URL
 def fetch_and_write_txt_data(txt_folder_name, txt_filename, txt_url):
     try:
+        # Make the request with the custom SSL context
         response = requests.get(txt_url)
         if response.status_code == 200:
         
@@ -234,7 +235,7 @@ def main():
     print(f"Name: {name}")
 
     #Main url's
-    txt_url = 'https://shakespeare.mit.edu/romeo_juliet/full.html'
+    txt_url = 'https://www.thecompleteworksofshakespeare.com/tragedy/romeo-and-juliet'
     csv_url = 'https://raw.githubusercontent.com/MainakRepositor/Datasets/master/World%20Happiness%20Data/2020.csv' 
     excel_url = 'https://github.com/bharathirajatut/sample-excel-dataset/raw/master/cattle.xls' 
     json_url = 'http://api.open-notify.org/astros.json'
